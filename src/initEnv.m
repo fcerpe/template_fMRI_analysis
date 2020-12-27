@@ -1,17 +1,22 @@
-% 1 - Check if version requirements
-% are satisfied and the packages are
-% are installed/loaded:
-%   Octave > 4
-%       - image
-%       - optim
-%       - struct
-%       - statistics
-%
-%   MATLAB >= R2015b
-%
-% 2 - Add project to the O/M path
+% (C) Copyright 2020 Agah Karakuzu
+% (C) Copyright 2019 CPP_SPM pipeline developpers
 
-function initEnv
+function initEnv()
+    %
+    %  Sets up the environment for the analysis
+    %
+    % 1 - Check if version requirements are satisfied
+    %     and that the packages are installed/loaded:
+    %
+    %   Octave > 4
+    %       - image
+    %       - io
+    %       - statistics
+    %
+    %   MATLAB >= R2015b
+    %
+    % 2 - Add libraries to the Octave/Matlab path
+    %
 
     octaveVersion = '4.0.3';
     matlabVersion = '8.6.0';
@@ -44,14 +49,14 @@ function initEnv
     else % MATLAB ----------------------------
 
         if verLessThan('matlab', matlabVersion)
-            error('Sorry, minimum required version is R2017b. :(');
+            error('Sorry, minimum required version is R2015b. :(');
         end
 
     end
 
     % If external dir is empty throw an exception
     % and ask user to update submodules.
-    libDirectory = fullfile(fileparts(mfilename('fullpath')), 'lib');
+    libDirectory = fullfile(fileparts(mfilename('fullpath')), '..', 'lib');
 
     if numel(dir(libDirectory)) <= 2 % Means that the external is empty
         error(['Git submodules are not cloned!', ...
@@ -97,10 +102,10 @@ end
 
 function addDependencies()
 
-    pth = fileparts(mfilename('fullpath'));
+    pth = fullfile(fileparts(mfilename('fullpath')), '..');
     addpath(fullfile(pth, 'lib', 'check_my_code'));
-    addpath(genpath(fullfile(pth, 'lib', 'CPP_BIDS_SPM_pipeline', 'src')));
-    addpath(genpath(fullfile(pth, 'lib', 'CPP_BIDS_SPM_pipeline', 'lib')));
+    addpath(genpath(fullfile(pth, 'lib', 'CPP_SPM', 'src')));
+    addpath(genpath(fullfile(pth, 'lib', 'CPP_SPM', 'lib')));
     addpath(fullfile(pth, 'src'));
 
 end
