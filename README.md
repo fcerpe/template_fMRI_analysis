@@ -1,7 +1,7 @@
 **Unit tests and coverage**
 
 [![](https://img.shields.io/badge/Octave-CI-blue?logo=Octave&logoColor=white)](https://github.com/Remi-gau/template_matlab_analysis/actions)
-![](https://github.com/Remi-gau/template_matlab_analysis/workflows/CI/badge.svg) 
+![](https://github.com/Remi-gau/template_matlab_analysis/workflows/CI/badge.svg)
 
 [![codecov](https://codecov.io/gh/Remi-gau/template_matlab_analysis/branch/master/graph/badge.svg)](https://codecov.io/gh/Remi-gau/template_matlab_analysis)
 
@@ -18,14 +18,14 @@
 
 1. Click the green button `Use this template`.
 
-1. Give a name to the repository you want to create. 
+1. Give a name to the repository you want to create.
    Something short that contains the name of your experiment: `analysis_fMRI_FaceLocalizer`.
 
 1. Decide if you want this new repo to be public or private.
 
 1. Click on `Create repository from template`
 
-You now have a copy of the template on your Github account. 
+You now have a copy of the template on your Github account.
 You can then download the code and the pre-set dependencies like this.
 
 1. Click on green `Download` button and copy the `URL_to_your_repo` that is shown there.
@@ -57,6 +57,7 @@ This will set up everything automatically in your current directory.
 ├── .github  # where you put anything github related
 │   └── workflows # where you define your github actions
 │       └── moxunit.yml # a yaml file that defines a github action
+├── docs # sphynx based documentation
 ├── lib # where you put the code from external libraries (mathworks website or other github repositories)
 │   └── README.md
 ├── src # WHERE YOU PUT YOUR CODE
@@ -65,21 +66,23 @@ This will set up everything automatically in your current directory.
 ├── tests # where you put your unit tests
 |   ├── README.md
 |   └── miss_hit.cfg
-├── .travis.yml # where you define the continuous integration done by Travis
 ├── LICENSE
 ├── README.md
-├── environment.yml # a simple environment for anything python related in this repo
+├── .pre-commit-config.yaml
+├── requirements.txt # a simple environment for anything python related in this repo
 ├── miss_hit.cfg # configuration file for the matlab miss hit linter
 └── initEnv.m # a .m file to set up your project (adds the right folder to the path)
 ```
 
-## Keeping your code stylish: miss hit linter
+## Keeping your code stylish
 
-## Python environment
+If you have python installed:
 
-More on this [here](https://the-turing-way.netlify.app/reproducible-research/renv/renv-package.html)
+```
+pip install -r requirements.txt
+pre-commit install
+```
 
 ## Testing your code
 
 ## Continuous integration
-

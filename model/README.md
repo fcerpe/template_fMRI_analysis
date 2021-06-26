@@ -1,4 +1,4 @@
-# model files 
+# model files
 
 Defines the model used for the GLM and defines what contrasts to compute.
 

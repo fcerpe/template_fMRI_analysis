@@ -16,15 +16,15 @@
         ]
       },
       "AutoContrasts": [
-        "trial_type.static", 
-        "trial_type.motion" , 
+        "trial_type.static",
+        "trial_type.motion" ,
         "trial_type.response"]
     },
     {
       "Level": "subject",
       "AutoContrasts": [
-        "trial_type.static", 
-        "trial_type.motion" , 
+        "trial_type.static",
+        "trial_type.motion" ,
         "trial_type.response"],
       "Contrasts": [
         {
