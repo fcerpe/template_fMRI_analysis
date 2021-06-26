@@ -57,6 +57,7 @@ This will set up everything automatically in your current directory.
 ├── .github  # where you put anything github related
 │   └── workflows # where you define your github actions
 │       └── moxunit.yml # a yaml file that defines a github action
+├── docs # sphynx based documentation
 ├── lib # where you put the code from external libraries (mathworks website or other github repositories)
 │   └── README.md
 ├── src # WHERE YOU PUT YOUR CODE
@@ -65,19 +66,15 @@ This will set up everything automatically in your current directory.
 ├── tests # where you put your unit tests
 |   ├── README.md
 |   └── miss_hit.cfg
-├── .travis.yml # where you define the continuous integration done by Travis
 ├── LICENSE
 ├── README.md
-├── environment.yml # a simple environment for anything python related in this repo
+├── .pre-commit-config.yaml 
+├── requirements.txt # a simple environment for anything python related in this repo
 ├── miss_hit.cfg # configuration file for the matlab miss hit linter
 └── initEnv.m # a .m file to set up your project (adds the right folder to the path)
 ```
 
-## Keeping your code stylish: miss hit linter
-
-## Python environment
-
-More on this [here](https://the-turing-way.netlify.app/reproducible-research/renv/renv-package.html)
+## Keeping your code stylish
 
 ## Testing your code
 
